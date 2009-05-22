@@ -192,9 +192,7 @@ public class ExifToolWrapper {
 
 		try{
 			Process p = Runtime.getRuntime().exec(command.toArray(new String[0]));
-			BufferedReader br = new BufferedReader(
-					new InputStreamReader(new BufferedInputStream(
-							p.getInputStream()))); 
+			BufferedReader br = new BufferedReader(new InputStreamReader(new BufferedInputStream(p.getInputStream()))); 
 
 			String line;
 			File currentFile = null;
@@ -276,9 +274,7 @@ public class ExifToolWrapper {
 
 		try{
 			Process p = Runtime.getRuntime().exec(command.toArray(new String[1]));
-			BufferedReader br = new BufferedReader(
-					new InputStreamReader(new BufferedInputStream(
-							p.getInputStream()))); 
+			BufferedReader br = new BufferedReader(new InputStreamReader(new BufferedInputStream(p.getInputStream()))); 
 
 			String line;
 			while ((line = br.readLine()) != null){
@@ -356,8 +352,7 @@ public class ExifToolWrapper {
 	 * @param lenth
 	 * @return
 	 */
-	private byte[] readBytes(BufferedInputStream bis, 
-			int length) throws IOException {
+	private byte[] readBytes(BufferedInputStream bis, int length) throws IOException {
 //		int position = 0;
 		byte[] binaryTag = new byte[length];
 //		byte[] temp = new byte[1024];
