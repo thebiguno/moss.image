@@ -56,7 +56,7 @@ public class ImageFunctions {
 			width = -1;
 		}
 
-		return getBufferedImage(img.getScaledInstance(width, height, Image.SCALE_FAST));
+		return getBufferedImage(img.getScaledInstance(width, height, Image.SCALE_SMOOTH));
 	}
 	
 	/**
