@@ -1,3 +1,6 @@
+2.1.0.0 - September 6 2009
+-Renamed packages to ca.digitalcave
+
 2.0.0.1 - August 16 2009
 -Changed default scaling method to SMOOTH from SPEED; this should help the chunky image thumbnails.
 
