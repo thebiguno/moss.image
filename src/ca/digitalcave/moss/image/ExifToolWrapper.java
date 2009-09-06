@@ -1,7 +1,7 @@
 /*
  * Created on Dec 27, 2006 by wyatt
  */
-package org.homeunix.thecave.moss.image;
+package ca.digitalcave.moss.image;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedReader;
