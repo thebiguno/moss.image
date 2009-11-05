@@ -3,14 +3,12 @@
  */
 package ca.digitalcave.moss.image;
 
-import java.awt.Component;
 import java.awt.Graphics;
 import java.awt.Image;
 import java.awt.geom.AffineTransform;
 import java.awt.image.AffineTransformOp;
 import java.awt.image.BufferedImage;
 import java.io.File;
-import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.util.Iterator;
@@ -139,13 +137,13 @@ public class ImageFunctions {
 	 * @param c The component which you want an image of
 	 * @return A BufferedImage of the given component
 	 */
-	public static BufferedImage getBufferedImage(Component c) {
-		BufferedImage img = new BufferedImage(c.getWidth(), c.getHeight(), BufferedImage.TYPE_INT_RGB);
-		Graphics g = img.getGraphics();
-		c.paint(g);
-		
-		return img;
-	}
+//	public static BufferedImage getBufferedImage(Component c) {
+//		BufferedImage img = new BufferedImage(c.getWidth(), c.getHeight(), BufferedImage.TYPE_INT_RGB);
+//		Graphics g = img.getGraphics();
+//		c.paint(g);
+//		
+//		return img;
+//	}
 	
 	/**
 	 * Converts the given image, and caches it to the given destination.  The ImageParameters
@@ -199,21 +197,21 @@ public class ImageFunctions {
 		}
 	}
 	
-	public static void writeImage(BufferedImage bi, File imageFile, float quality) {
-		if (bi == null){
-			logger.log(Level.WARNING, "Buffered Image is null!  Cannot write image to file");
-			return;
-		}
-			
-		try {
-			//Ensure we have a folder to write to
-			imageFile.getParentFile().mkdirs();
-
-			//Get the ImageWriter which allows us to set quality, and write the image
-			writeImage(bi, new FileOutputStream(imageFile), quality, imageFile.getName().replaceAll("^.*\\.(\\w+)", "$1"));
-		}
-		catch (IOException ioe){
-			logger.log(Level.SEVERE, "Problem encountered while writing image to file", ioe);
-		}
-	}
+//	public static void writeImage(BufferedImage bi, File imageFile, float quality) {
+//		if (bi == null){
+//			logger.log(Level.WARNING, "Buffered Image is null!  Cannot write image to file");
+//			return;
+//		}
+//			
+//		try {
+//			//Ensure we have a folder to write to
+//			imageFile.getParentFile().mkdirs();
+//
+//			//Get the ImageWriter which allows us to set quality, and write the image
+//			writeImage(bi, new FileOutputStream(imageFile), quality, imageFile.getName().replaceAll("^.*\\.(\\w+)", "$1"));
+//		}
+//		catch (IOException ioe){
+//			logger.log(Level.SEVERE, "Problem encountered while writing image to file", ioe);
+//		}
+//	}
 }
